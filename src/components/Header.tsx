@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SearchBar from './SearchBar';
 
 const Header = () => {
   return (
@@ -16,13 +17,7 @@ const Header = () => {
               কিভাবে বইগুলো পড়বেন ? 
             </Link>
           </div>
-          <div className="w-full max-w-xs">
-            <input
-              type="text"
-              placeholder="এখানে লেখকের নাম অথবা বইয়ের নাম লিখে খুঁজুন..."
-              className="bg-[#EAE0DA] text-sm text-gray-900 placeholder-gray-600 w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-            />
-          </div>
+          <SearchBar />
         </div>
       </div>
     </header>
