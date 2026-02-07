@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Author } from '@/data/authors';
+import { books } from '@/data/books';
 import AuthorImage from './AuthorImage';
 
 const AuthorSection = ({
@@ -10,14 +11,17 @@ const AuthorSection = ({
 }: {
   title: string;
   groupedAuthors: Record<string, Author[]>;
-}) => (
-  <div className="mb-12">
-    <h1 className="text-3xl font-bold mb-8 text-gray-800">{title}</h1>
-    {Object.entries(groupedAuthors).map(([letter, authorGroup]) => (
-      <div key={letter} className="mb-10">
-        <h2 className="text-4xl font-bold text-gray-400 mb-4">{letter}</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
-          {authorGroup.map((author) => (
+}) => {
+  // Flatten all authors into a single array
+  const allAuthors = Object.values(groupedAuthors).flat();
+
+  return (
+    <div className="mb-12">
+      <h1 className="text-3xl font-bold mb-8 text-gray-800">{title}</h1>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        {allAuthors.map((author) => {
+          const bookCount = books.filter((book) => book.authorId === author.id).length;
+          return (
             <Link
               href={`/author/${author.id}`}
               key={author.id}
@@ -26,14 +30,14 @@ const AuthorSection = ({
               <AuthorImage src={author.image} alt={author.name} />
               <h3 className="text-md font-semibold mt-4 text-gray-800">{author.name}</h3>
               <p className="text-gray-500 text-sm mt-1">
-                মোট বই: {author.id === 'edgar-allan-poe' ? 2 : 1} টি
+                মোট বই: {bookCount} টি
               </p>
             </Link>
-          ))}
-        </div>
+          );
+        })}
       </div>
-    ))}
-  </div>
-);
+    </div>
+  );
+};
 
 export default AuthorSection;
