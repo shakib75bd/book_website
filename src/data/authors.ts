@@ -11,7 +11,7 @@ export const authors: Author[] = [
     id: 'agatha-christie',
     name: 'আগাথা ক্রিস্টি',
     bio: 'Dame Agatha Mary Clarissa Christie, Lady Mallowan, DBE was an English writer known for her sixty-six detective novels and fourteen short story collections, particularly those revolving around fictional detectives Hercule Poirot and Miss Marple.',
-    image: '/authors/avatar.png',
+    image: '/authors/agatha.webp',
   },
   {
     id: 'wilbur-smith',
@@ -23,13 +23,13 @@ export const authors: Author[] = [
     id: 'edgar-allan-poe',
     name: 'এডগার অ্যালান পো',
     bio: 'Edgar Allan Poe was an American writer, poet, editor, and literary critic. Poe is best known for his poetry and short stories, particularly his tales of mystery and the macabre.',
-    image: '/authors/avatar.png',
+    image: '/authors/alanpo.webp',
   },
   {
     id: 'jules-verne',
     name: 'জুল ভার্ন',
     bio: 'Jules Gabriel Verne was a French novelist, poet, and playwright. His collaboration with the publisher Pierre-Jules Hetzel led to the creation of the Voyages extraordinaires, a series of bestselling adventure novels including Journey to the Center of the Earth, Twenty Thousand Leagues Under the Seas, and Around the World in Eighty Days.',
-    image: '/authors/avatar.png',
+    image: '/authors/jul.webp',
   },
   {
     id: 'dale-carnegie',
@@ -79,19 +79,19 @@ export const authors: Author[] = [
     id: 'arif-azad',
     name: 'আরিফ আজাদ',
     bio: 'Arif Azad is a popular young Bangladeshi writer.',
-    image: '/authors/avatar.png',
+    image: '/authors/arifazad.jpg',
   },
   {
     id: 'ahmed-sofa',
     name: 'আহমদ ছফা',
     bio: 'Ahmed Sofa was a Bangladeshi writer, thinker, novelist, poet, and public intellectual. He is regarded as one of the greatest writers in the Bengali language and the most important intellectual of Bangladesh.',
-    image: '/authors/avatar.png',
+    image: '/authors/ahmadchofa.webp',
   },
   {
     id: 'itihas-o-oitihasik-ghotona',
     name: 'ইতিহাস ও ঐতিহাসিক ঘটনা',
     bio: 'A collection of historical events.',
-    image: '/authors/avatar.png',
+    image: '/authors/history.jpg',
   },
   {
     id: 'upendrakishore-ray-chowdhury',
@@ -103,7 +103,7 @@ export const authors: Author[] = [
     id: 'zahir-raihan',
     name: 'জহির রায়হান',
     bio: 'Zahir Raihan was a Bangladeshi novelist, writer and filmmaker. He is most notable for his documentary Stop Genocide, made during the Bangladesh Liberation War.',
-    image: '/authors/avatar.png',
+    image: '/authors/jahirrayhan.webp',
   },
   {
     id: 'taradas-bandyopadhyay',
