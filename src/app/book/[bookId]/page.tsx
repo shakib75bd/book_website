@@ -2,8 +2,9 @@ import { books } from '@/data/books';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function BookPage({ params }: { params: { bookId: string } }) {
-  const book = books.find((b) => b.id === params.bookId);
+export default async function BookPage({ params }: { params: Promise<{ bookId: string }> }) {
+  const { bookId } = await params;
+  const book = books.find((b) => b.id === bookId);
 
   if (!book) {
     return <div>Book not found</div>;
@@ -22,7 +23,6 @@ export default function BookPage({ params }: { params: { bookId: string } }) {
           />
         </div>
         <div className="flex-grow">
-          <p className="text-yellow-500">অনুবাদ</p>
           <p className="text-gray-400">{book.publishedDate}</p>
           <h1 className="text-4xl font-bold mt-2">{book.title}</h1>
           <Link
@@ -32,10 +32,6 @@ export default function BookPage({ params }: { params: { bookId: string } }) {
             {book.author}
           </Link>
           <p className="text-gray-400 mt-2">
-            {book.id === 'edgar-allan-poe-rachanasamagra'
-              ? '৮৩ পিডিএফ'
-              : '৮৩ পিডিএফ'}{' '}
-            | ৬ ডাউনলোড
           </p>
           <a
             href={book.downloadLink}

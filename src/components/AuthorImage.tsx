@@ -14,7 +14,7 @@ export default function AuthorImage({ src, alt }: { src: string; alt: string }) 
       height={120}
       className="rounded-full object-cover border-4 border-white shadow-sm"
       onError={() => {
-        setImgSrc('/no-image.svg');
+        setImgSrc('/authors/avatar.png');
       }}
     />
   );
