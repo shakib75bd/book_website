@@ -16,6 +16,12 @@ const Header = () => {
             >
               কিভাবে বইগুলো পড়বেন ? 
             </Link>
+            <Link 
+              href="/admin/add-book" 
+              className="text-xs sm:text-sm hover:text-gray-200 transition-colors border-l border-gray-300 pl-2 sm:pl-6"
+            >
+              অ্যাডমিন
+            </Link>
           </div>
           <SearchBar />
         </div>

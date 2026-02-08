@@ -4,7 +4,8 @@ import Link from 'next/link';
 
 export default async function BookPage({ params }: { params: Promise<{ bookId: string }> }) {
   const { bookId } = await params;
-  const book = books.find((b) => b.id === bookId);
+  const decodedBookId = decodeURIComponent(bookId);
+  const book = books.find((b) => b.id === decodedBookId);
 
   if (!book) {
     return <div>Book not found</div>;
